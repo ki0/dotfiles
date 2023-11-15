@@ -1,0 +1,6 @@
+[meta]
+	isLocalConfig = true
+[user]
+	signingkey = ~/.ssh/id_rsa.pub
+[gpg "ssh"]
+	allowedSignersFile = /Users/ed/.ssh/allowed_signers

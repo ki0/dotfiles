@@ -1,0 +1,13 @@
+@antfu/ni
+@githubnext/github-copilot-cli
+cspell
+easy-sharing
+generator-code
+intelephense
+lighthouse
+neovim
+typescript-language-server
+typescript
+@vscode/vsce
+wrangler
+yo

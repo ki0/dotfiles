@@ -1,0 +1,22 @@
+### OSX ###
+.DS_Store
+### Git ###
+#git/.gitconfig-local
+
+###  VIM ###
+NetrwTreeListing*
+
+### Karabiner ###
+karabiner/automatic_backups/
+
+### Raycast Extensions ###
+config/raycast/extensions/
+
+### REPOS ###
+repos/work.list
+repos/playground.list
+
+### PRIVATE ###
+private/ssh/
+.gitsecret/keys/random_seed
+!*.secret

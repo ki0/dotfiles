@@ -1,0 +1,305 @@
+###############################################################
+# ~/.Brewfile - Software Installs for MacOS                   #
+#                                                             #
+# List of packages to be installed / updated via Homebrew     #
+# Apps are sorted by category, and arranged alphabetically    #
+# Be sure to delete / comment out anything you do not need    #
+# Usage, run: $ brew bundle --global --file $HOME/.Brewfile   #
+# Source GH repository: https://github.com/edheltzel/Brewfile #
+# See brew docs for more info: https://docs.brew.sh/Manpage   #
+#                                                             #
+###############################################################
+
+# Options
+cask_args appdir: '/Applications', require_sha: true
+
+# Taps
+tap 'buo/cask-upgrade'
+tap 'clementtsang/bottom'
+tap 'dart-lang/dart'
+tap 'eddieantonio/eddieantonio'
+tap 'github/gh'
+tap 'homebrew/cask-drivers'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
+tap 'kyoh86/tap'
+tap 'over-sh/bun'
+tap 'sass/sass'
+tap 'teamookla/speedtest'   # Command line speed test utility
+
+#############################################################
+# Command Line                                              #
+#############################################################
+brew 'fish'        # Shell
+brew 'starship'    # Cross-shell prompt - Rust
+
+# CLI Essentials
+brew 'git'          # Version controll
+brew 'neovim'       # Text editor
+# brew 'tmux'         # Term multiplexer
+brew 'topgrade'     # Upgrade all the things - Rust
+
+# CLI Basics
+brew 'ack'          # Search tool like grep, but faster
+brew 'aria2'        # Resuming download util (better wget)
+brew 'bat'          # Output highlighting (better cat) - Rust
+brew 'brew-cask-completion' # Fish shell completion for brew cask
+brew 'cmake'        # Build system
+brew 'coreutils'    # GNU core utilities (those that come with macOS are outdated)
+brew 'ctags'        # Tag generator for programming languages
+brew 'diff-so-fancy'# Readable file compares (better diff)
+brew 'duf'          # Get info on mounted disks (better df) - Go
+brew 'duti'         # Set default apps for file types
+brew 'entr'         # Run command whenever file changes
+# brew 'exa'        # Listing files with info (better ls) - Rust
+brew 'eza'          # Listing files with info (better ls) - Rust
+brew 'exiftool'     # Read, write and modify exif data
+brew 'fd'           # Find files - Rust
+brew 'fzf'          # Fuzzy file finder and filtering
+brew 'fzf'          # Fuzzy finder
+brew 'grc'          # Colorize terminal output
+brew 'hyperfine'    # Benchmarking for arbitrary commands
+brew 'jdupes'       # Duplicate file finder
+brew 'jq'           # JSON parser, output and query files
+brew 'just'         # Powerful command runner (better make)
+brew 'mas'          # Mac App Store CLI
+brew 'most'         # Multi-window scroll pager (better less)
+brew 'procs'        # Advanced process viewer (better ps) - Rust
+brew 'ripgrep'      # Searching within files (better grep) - Rust
+brew 'rsync'        # Fast incremental file transfer
+brew 'sd'           # RegEx find and replace (better sed) - Rust
+brew 'tokei'        # Count lines of code (better cloc) - Rust
+brew 'trash-cli'    # Recover and restore removed files
+brew 'watchexec'    # Run command whenever file changes - Rust
+brew 'zoxide'       # Auto-learning navigation (better cd) - Rust --> fish plugin adds to PATH
+
+# CLI Image Processing and Compression
+brew 'gdk-pixbuf' # Image loading library
+brew 'graphicsmagick' # Image manipulation
+brew 'imagemagick' # Image manipulation
+brew 'jpegoptim' # JPEG image compressionjk
+brew 'mozjpeg' # JPEG image compression
+brew 'optipng' # PNG image compression
+brew 'pango' # Text layout and rendering
+
+# CLI Monitoring and Performance Apps
+brew 'bmon'         # Bandwidth utilization monitor
+brew 'bottom'       # Resource monitor (better top) - Rust
+brew 'ctop'         # Container metrics and monitoring - Go
+brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
+brew 'glances'      # Resource monitor + web and API
+brew 'goaccess'     # Web log analyzer and viewer
+brew 'gping'        # Interactive ping tool, with graph
+
+# CLI Productivity Apps
+brew 'rclone'       # Manage cloud storage
+
+# CLI Development Suits
+brew 'lazydocker'   # Full Docker management app - Go
+brew 'gitui'        # A replacement for lazygit - Full Git management app - Rust
+
+# CLI Docs and Cheatsheets
+brew 'navi'         # Browse, search, read cheat sheets
+brew 'tealdeer'     # Read cheat sheets (better tldr) - Rust
+
+# CLI Misc
+brew 'chafa'        # Image to ASCII art
+brew 'cowsay'       # Have an ASCII cow say your message
+brew 'figlet'       # Output text as big ASCII art text
+brew 'neofetch'     # Show system data and ditstro info
+brew 'pv'           # Pipe viewer, with animation options
+brew 'glow'         # Terminal markdown reader - Go
+
+#############################################################
+# Software Development                                      #
+#############################################################
+
+# Development Apps
+cask 'dbeaver-community'            # Database management
+cask 'dbngin'                       # Local MySQL database management
+cask 'devtoys'                      # Dev tools/utilities for Mac
+cask 'fork'                         # Git visual client
+cask 'iterm2'                       # Better terminalmemulator
+cask 'sequel-pro'                   # MySQL database management
+cask 'typora'                       # Just a simple markdown editor
+cask 'visual-studio-code'           # Default text editor
+cask 'visual-studio-code-insiders'  # Nightly text editor
+cask 'local'                        # Local WordPress development
+cask 'jetbrains-toolbox'            # Jetbrains editors
+
+# Development Langs, Compilers, Package Managers and SDKs
+brew 'bun'                # All-in-one toolkit for JS/TS
+brew 'dart'               # Dart SDK
+brew 'deno'               # Deno JavaScript/TypeScript runtime
+brew 'fig'                # Commandline Utility for any terminal
+brew 'fnm'                # Switching node versions
+brew 'go'                 # Compiler for Go Lang
+brew 'hugo'               # Static site generator - Go
+brew 'lua'                # Lua interpreter
+brew 'luarocks'           # Package manager for Lua
+# brew 'node'           # Node.js -->  Use fnm See packages/
+brew 'php'                # PHP
+brew 'postgresql@14'      # PostgreSQL database engine
+brew 'python'             # Python 2
+brew 'python3'            # Python 3
+brew 'rbenv'              # Ruby version manager
+brew 'ruby-build'         # Ruby build plugin for rbenv
+brew 'richgo'             # Go test output formatter/opt/homebrew/bin/fish
+brew 'rust'               # Rust language
+brew 'rustup-init'        # Rust version manager
+brew 'sass/sass/migrator'  # Sass mignration tool
+brew 'sass/sass/sass'      # Sass CSS preprocessor
+brew 'sqlite'              # SQLite database engine
+brew 'tdewolff/tap/minify' # Minify HTML, CSS, JS, JSON, SVG, XML
+brew 'zola'                # Static site generator - Rust
+
+# DevOps SCMs and CI/CD Tools
+# brew 'ansible'            # Automation
+# brew 'curl'               # Command line HTTP client
+brew 'curlie'             # Command line HTTP client - Go
+brew 'dive'               # Docker image viewer
+brew 'docker'             # Containers
+brew 'orbstack'           # Docker image viewer
+brew 'doctl'              # DigitalOcean CLI
+brew 's3cmd'              # S3 command line tool
+
+# Development Utils
+brew 'gh'                 # Interact with GitHub PRs, issues, repos
+brew 'git-delta'          # Git diff viewer
+brew 'git-secret'         # Encrypt files in git repos
+brew 'git-extras'         # Extra git commands for common tasks
+brew 'git-flow-avh'       # Git extensions to provide high-level repository operations
+brew 'git-lfs'            # Git Large File Storage
+brew 'lighttpd'           # Lightweight web server
+brew 'miniserve'          # Static file server
+brew 'mkcert'             # Local HTTPS development
+brew 'scc'                # Source code counter - Go
+brew 'tig'                # Text-mode interface for git
+brew 'watchexec'          # Watch a directory and execute a command when files change
+brew 'wget'               # wget with IRI support
+brew 'zaquestion/tap/lab' # GitLab CLI
+cask 'mactex'             # LaTeX typesetting system
+
+# Network and Security Testing
+brew 'bettercap'      # Network, scanning and moniroting
+brew 'ngrep'          # grep for network traffic
+brew 'nmap'           # Port scanning
+brew 'wrk'            # HTTP benchmarking
+#cask 'burp-suite'     # Web security testing
+#cask 'owasp-zap'      # Web app security scanner
+#cask 'wireshark'      # Network analyzer + packet capture
+
+# Security Utilities
+brew 'bcrypt'            # Encryption utility, using blowfish
+brew 'clamav'            # Open source virus scanning suite
+brew 'dnscrypt-proxy'    # Proxy for using encrypted DNS
+brew 'gnupg'             # GNU Privacy Guard
+brew 'git-crypt'         # Transparent encryption for git repos
+brew 'lynis'             # Scan system for common security issues
+brew 'nss'               # Network Security Services
+brew 'openssl'           # Cryptography and SSL/TLS Toolkit
+brew 'rkhunter'          # Search / detect potential root kits
+brew 'ssh-copy-id'       # Copy SSH keys to remote hosts
+cask 'gpg-suite'         # GPG encryption files
+#cask 'veracrypt'         # File and volume encryption
+
+#############################################################
+# Desktop Applications                                      #
+#############################################################
+
+# Creativity
+cask 'adobe-creative-cloud' # Adobe Creative Cloud
+cask 'figma'                # Design tool
+cask 'nucleo'               # Icon manager
+cask 'principle'            # Prototyping tool
+
+# Media
+# cask 'boom'                                  # Audio enhancer
+# brew 'handbrake'           # Video transcoder
+cask 'iina'                                  # Media player
+cask 'imageoptim'                            # Image compression
+cask 'kap'                                   # Screen recorder
+brew 'pandoc'                                # Universal file converter
+cask 'spotify', args: { require_sha: false } # Propietary music streaming
+# cask 'transmission'                          # Torrent client
+cask 'vlc'                                   # Media player
+brew 'webp'                                  # WebP image format
+brew 'youtube-dl'                            # YouTube video downloader
+
+# Personal Applications
+cask 'authy'          # 2FA app
+cask 'bitwarden'      # Password manager
+cask 'cyberduck'      # Mount remote storage locations
+cask 'discord'        # Chat app
+cask 'dropbox'        # Cloud storage
+cask 'ledger-live'    # Crypto hardware wallet manager
+cask 'notion'         # Workspace app
+cask 'todoist'        # Task manager
+
+# Utility Applications
+# brew 'displaylink' #  Multi-monitor support - for use on M1 Air
+cask 'namechanger' # Rename files in bulk
+cask 'onyx'        # System maintenance
+# cask 'alt-tab'     # Windows-like alt-tab
+
+# Browsers
+#cask 'brave-browser-beta'        # Brave browser beta channel
+cask 'brave-browser'             # Brave browser
+cask 'choosy'                    # Choose which browser to open links in
+cask 'firefox-developer-edition' # Firefox dev edition
+cask 'google-chrome'             # Chrome browser
+cask 'responsively'              # Responsive web design testing
+cask 'safari-technology-preview' # Safari tech preview
+
+# Fonts
+tap 'homebrew/cask-fonts'
+cask 'font-fira-code-nerd-font'
+cask 'font-jetbrains-mono-nerd-font'
+cask 'font-inter'
+
+#############################################################
+# MacOS-Specific Stuff                                      #
+#############################################################
+
+# Mac OS Quick-Look Plugins
+cask 'qlcolorcode'    # QL for code with highlighting
+cask 'qlimagesize'    # QL for size info for images
+cask 'qlmarkdown'     # QL for markdown files
+cask 'qlprettypatch'  # QL for patch / diff files
+cask 'qlstephen'      # QL for dev text files
+cask 'qlvideo'        # QL for video formats
+cask 'quicklook-csv'  # QL for tables in CSV format
+cask 'quicklook-json', args: { require_sha: false } # QL for JSON, with trees
+cask 'quicklookapk',   args: { require_sha: false } # QL for Android APKs
+cask 'webpquicklook',  args: { require_sha: false } # QL for WebP image files
+
+# Mac OS Mods and Imrovments
+brew 'm-cli'              # All in one MacOS management CLI app: m help
+#cask 'alt-tab'            # Much better alt-tab window switcher
+cask 'hiddenbar'          # Hide / show annoying menubar icons
+cask 'itsycal'            # Calendar in menubar
+cask 'mjolnir'            # Util for loading Lua automations
+cask 'openinterminal'     # Finder button, opens directory in terminal
+cask 'raycast', args: { require_sha: false }  # Spotlight alternative
+cask 'aflred'             # Spotlight alternative with better search
+cask 'typinator'          # Text expander - macOS only
+# cask 'espanso'            # Text expander - cross platforma
+
+# Mac OS Utility Apps
+#cask 'little-snitch'  # Firewall app viewing / blocking traffic
+cask 'stats'              # System resource usage in menubar
+cask 'keka'           # File archiver and extractor
+
+# Install apps from the Mac App Store
+#mas 'Affinity Designer', id: 824171161
+#mas 'Affinity Photo', id: 824183456
+mas 'ColorSlurp', id: 1287239339
+mas 'Icon Slate', id: 439697913
+mas 'Invoice Ninja V5', id: 1503970375
+mas 'Just Focus', id: 1142151959
+mas 'Keynote', id: 409183694
+#mas 'Wappalyzer', id: 1520333300
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+#mas 'Mia for Gmail', id: 851622884
+#mas 'Xcode', id: 497799835
